@@ -7,8 +7,10 @@ INCLUDEPATH += /usr/include/ooml
 SOURCES += \
     main.cpp \
     keyboardtoh.cpp \
-    screwhole.cpp
+    screwhole.cpp \
+    keyboardmount.cpp
 
 HEADERS += \
     keyboardtoh.h \
-    screwhole.h
+    screwhole.h \
+    keyboardmount.h

@@ -5,15 +5,13 @@
 #include <iostream>
 
 #include "keyboardtoh.h"
-#include "screwhole.h"
+#include "keyboardmount.h"
 
 using namespace std;
 
 int main()
 {
     Component toh = KeyboardTOH();
-
-    Component oko = ScrewHole(0.5, 1, 1.5, 1);
 
     IndentWriter writer;
     writer << toh;
@@ -27,9 +25,10 @@ int main()
         cerr << "Error, cannot open the file" << endl;
     }
 
-    IndentWriter writer2;
-    writer2 << oko;
+    Component keys_mount = KeyboardMount();
 
+    IndentWriter writer2;
+    writer2 << keys_mount;
 
     ofstream keyboardFile("TOH_to_keyboard.scad");
     if (keyboardFile){
